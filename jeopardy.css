@@ -243,7 +243,9 @@ body {
 .clue-popup .container>.table .cell img
 {
     width: auto;
+    height: auto;
     max-height: 65vh;
+    max-width: 100%;
     object-fit: fill;
     background: white;
     animation: image-animation 0s ease;
