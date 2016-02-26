@@ -245,7 +245,7 @@ body {
     width: auto;
     height: auto;
     max-height: 65vh;
-    max-width: 100%;
+    max-width: 65vw;
     object-fit: fill;
     background: white;
     animation: image-animation 0s ease;
