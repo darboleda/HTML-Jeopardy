@@ -306,7 +306,7 @@ body {
 
 .clue-popup .controls-row .answer-timer:not(.disabled):hover
 {
-    transform: translateY(-1vh) scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
 
 @-moz-document url-prefix() {
@@ -353,6 +353,7 @@ body {
 
 .circle-button:not(.disabled):hover
 {
+	transform: scale(1.1);
     transition: transform 0.1s, border 0.1s, color 0.1s, background 0.1s;
 }
 
@@ -497,7 +498,12 @@ body {
 }
 
 #bottom-menu .cell.hide-toggle {
-    transform: translateY(5vh);
+    transform: translateY(100%);
+}
+
+#bottom-menu .cell.team .buttons .circle-button:not(.disabled):hover{
+	border-color: white;
+    color: white;
 }
 
 #bottom-menu .cell.team .buttons .circle-button:not(.disabled):active {
@@ -506,17 +512,23 @@ body {
 
 
 #bottom-menu .cell.button:hover {
-    transform: translateY(-1vh);
+    transform: translateY(-10%);
     border-color: rgba(255, 255, 255, 0.3);
     color: white;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+input[type=number] {-moz-appearance: textfield;}
 
 #bottom-menu .team-table .cell.button:not(.team):active
 {
     color: black;
     background: white;
 }
-
 #bottom-menu .team-table .cell.team
 {
     min-width: 18vh;

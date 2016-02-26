@@ -1,8 +1,11 @@
+<!-- saved from url=(0014)about:internet -->
+
 <!DOCTYPE html>
 
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=10" />
         <title>Jeopardy</title>
         <script type="text/javascript" src="jquery-2.1.0.min.js"></script>
         <script type="text/javascript" src="jeopardy.js"></script>
@@ -29,8 +32,8 @@
                     <div class="table">
                         <div class="row clue-row"><div class="cell container"></div></div>
                         <div class="row controls-row">
-                            <div class="cell"><span class="round-timer-button circle-button" title="Show Answer">&#9200;</span></div>
-                            <div class="cell"><span class="answer-timer-button circle-button" title="Show Answer">&#8987;</span></div>
+                            <div class="cell"><span class="round-timer-button circle-button" title="Start the round timer">&#9200;</span></div>
+                            <div class="cell"><span class="answer-timer-button circle-button" title="Start the answer timer">&#8987;</span></div>
                             <div class="cell answer-timer-cell">
                                 <div class="answer-timer" data-interval-length="0.6" data-interval-count="10">&#x25ae;</div>
                             </div>
@@ -131,16 +134,26 @@
                 <span data-color="#000080"></span>
             </div>
             <div id="categories" data-multiplier="200" data-daily-doubles="2">
-                <div class="example" data-name="There Is No ___ Anime" data-multiplier="400">
+			
+				<!-- Example clues. If you copy this, make sure to delete the following part:
+				     
+					 class="example"
+					 
+			    -->
+                <div class="example" data-name="Example Clues" data-multiplier="400">
                     <div>
                         <div class="clue" data-type="text">Other than his lack of hair, he's pretty average-looking. But despite his skinny build, the hero can defeat enemies in one punch in this webcomic-turned-manga.</div>
                         <div class="answer">One-Punch Man</div>
                     </div>
+					
+					<!-- data-value overrides the calculated value of the clue -->
                     <div data-value="400">
+						<!-- use data-type="image" and data-source to use an image in the same folder -->
                         <div class="clue" data-type="image" data-source="beauty2.png"></div>
                         <div class="answer">Evangeline A. K. McDowell<br/>(Negima!)</div>
                     </div>
                     <div>
+						<!-- use data-type="audio" to use an audio file in the same folder. -->
                         <div class="clue" data-type="audio" data-source="test.mp3" data-audio-type="audio/mp3"></div>
                         <div class="answer">ololol</div>
                     </div>
@@ -286,6 +299,7 @@
             </div>
         </div>
         
+		<!-- Change the value of the data-source here to change the FINAL JEOPARDY MUSIC -->
         <span id="final-jeopardy-music" data-type="audio" data-audio-type="audio/mp3" data-source="test.mp3"></span>
 
         <div id="display-section">
